@@ -2,7 +2,7 @@ import React from "react";
 import noProjectImage from "../assets/no-projects.png";
 import Button from "./Button.jsx";
 
-const NoProjectSelected = ({onStartAddProject}) => {
+const NoProjectSelected = ({ onStartAddProject }) => {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
