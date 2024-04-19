@@ -8,7 +8,7 @@ function App() {
   const [projectsState, setProjectsState] = useState({
     selectedProjectId: undefined,
     projects: [],
-    tasks:[],
+    tasks: [],
   });
 
   function handleStartedAddProject() {
@@ -83,7 +83,15 @@ function App() {
     });
   }
 
-  function handleDeletedTask() {}
+  function handleDeletedTask(id) {
+    setProjectsState((prevState) => {
+      return {
+        ...prevState,
+        tasks: prevState.tasks.filter((task) => task.id !== id),
+      };
+    });
+  }
+
   let content = (
     <SelectedProject
       project={selectedProject}
